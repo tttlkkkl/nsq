@@ -499,7 +499,7 @@ func (p *protocolV2) AUTH(client *clientV2, params [][]byte) ([]byte, error) {
 		return nil, protocol.NewFatalClientErr(nil, "E_INVALID", "cannot AUTH in current state")
 	}
 
-	if len(params) != 1 {
+	if len(params) != 2 {
 		return nil, protocol.NewFatalClientErr(nil, "E_INVALID", "AUTH invalid number of parameters")
 	}
 
